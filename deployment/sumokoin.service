@@ -1,0 +1,14 @@
+[Unit]
+Description=Sumokoin Daemon
+After=network.target
+
+[Service]
+Type=forking
+GuessMainPID=no
+ExecStart=/usr/local/src/sumokoin/bin/sumokoind --rpc-bind-ip 127.0.0.1 --rpc-bind-port 26968 --detach
+ExecStop=/usr/local/src/sumokoin/bin/sumokoind exit
+Restart=always
+User=sumokoindaemon
+
+[Install]
+WantedBy=multi-user.target
