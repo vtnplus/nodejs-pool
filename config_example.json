@@ -1,7 +1,7 @@
 {
   "pool_id": 0,
   "bind_ip": "127.0.0.1",
-  "hostname": "testpool.com",
+  "hostname": "cminer.co",
   "db_storage_path": "CHANGEME",
   "coin": "xmr",
   "mysql": {

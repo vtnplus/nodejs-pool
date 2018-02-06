@@ -1,0 +1,13 @@
+[Unit]
+Description=Stellite Daemon
+After=network.target
+
+[Service]
+Type=forking
+GuessMainPID=no
+ExecStart=/usr/local/src/stellite/build/release/bin/stellited --rpc-bind-ip 127.0.0.1 --detach
+Restart=always
+User=pooldaemon
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,1 @@
+find "$(pwd -P)" -name '._*' -type f -delete
