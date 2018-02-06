@@ -1,0 +1,13 @@
+[Unit]
+Description=Sumo Daemon
+After=network.target
+
+[Service]
+Type=forking
+GuessMainPID=no
+ExecStart=/home/admin/sumokoin/build/release/bin/sumokoind --rpc-bind-ip 127.0.0.1 --detach
+Restart=always
+User=admin
+
+[Install]
+WantedBy=multi-user.target
